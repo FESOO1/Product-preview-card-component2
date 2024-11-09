@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --f-fraunces: "Fraunces", serif;
+    --f-montserrat: "Montserrat", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 80px;
+}
+
+/* PREVIEW CARD */
+
+.preview-card {
+    width: 650px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* PREVIEW CARD LEFT */
+
+.preview-card-left {
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    position: relative;
+}
+
+.preview-card-left-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-card-left::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 50%, 50%, transparent, black);
+    z-index: 1;
+}
+
+/* PREVIEW CARD RIGHT */
+
+.preview-card-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 35px;
+}
+
+.perfume-text {
+    font-family: var(--f-montserrat);
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: hsl(228, 12%, 48%);
+}
+
+.main-header {
+    font-family: var(--f-fraunces);
+    font-size: 2.2rem;
+    color: hsl(212, 21%, 14%);
+}
+
+.paragraph {
+    font-family: var(--f-montserrat);
+    line-height: 25px;
+    color: hsl(228, 12%, 48%);
+}
+
+.price {
+    font-family: var(--f-fraunces);
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    color: hsl(158, 36%, 37%);
+}
+
+.inner-price {
+    font-family: var(--f-montserrat);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+.add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-block: 13px;
+    border-radius: 0.5rem;
+    border: 0;
+    background-color: hsl(158, 36%, 37%);
+    font-family: var(--f-montserrat);
+    cursor: pointer;
+}
+
+.add-to-cart-button-text {
+    color: white;
+    font-weight: 600;
+}
+
+.add-to-cart-button:hover {
+    background-color: hsl(158, 42%, 28%);
+}
